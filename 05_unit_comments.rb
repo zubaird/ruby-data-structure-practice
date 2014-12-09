@@ -1,6 +1,7 @@
 require 'pp'
-require_relative 'curriculum'
 
+# Require the Ruby file
+#
 # Print out the unit names with the comment counts
 #
 # Expected output

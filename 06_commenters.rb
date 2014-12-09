@@ -1,6 +1,7 @@
 require 'pp'
-require_relative 'curriculum'
 
+# Require the Ruby file
+#
 # Print out the names of all the commenters
 #
 # Expected output

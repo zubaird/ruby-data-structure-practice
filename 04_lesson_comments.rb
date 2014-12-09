@@ -1,6 +1,7 @@
 require 'pp'
-require_relative 'curriculum'
 
+# Require json and parse the json file
+#
 # Print out the lesson names with the total number of comments
 #
 # Expected output

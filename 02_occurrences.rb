@@ -1,6 +1,7 @@
 require 'pp'
-require_relative 'curriculum'
 
+# Require the Ruby file
+#
 # Print out the date of each occurrence of each lesson
 #
 # Expected output
