@@ -1,6 +1,8 @@
 require 'pp'
 
 # Require the Ruby file
+require_relative 'curriculum'
+
 #
 # Print out the date of each occurrence of each lesson
 #
@@ -28,3 +30,14 @@ require 'pp'
 #       g5 on 2013-06-08
 #       g6 on 2013-07-08
 #       etc...
+
+CURRICULUM[:units].each do |unit|
+  puts unit[:name]
+  unit[:lessons].each do |lesson|
+    puts "  #{lesson[:name]}"
+
+    lesson[:occurrences].each do |date, occurrence|
+      puts "    #{occurrence[:cohort][:name]} on #{date}"
+    end
+  end
+end
