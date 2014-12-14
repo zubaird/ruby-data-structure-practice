@@ -25,4 +25,3 @@ CURRICULUM[:units].each do |unit|
   unit[:lessons].each do |lesson|
     puts "  #{lesson[:name]}"
   end
-end
