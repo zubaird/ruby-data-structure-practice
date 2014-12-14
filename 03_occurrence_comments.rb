@@ -1,4 +1,5 @@
 require 'pp'
+require 'json'
 
 # Require json and parse the json file
 #
@@ -27,3 +28,17 @@ require 'pp'
 #       g4 on 2013-05-08 - 0
 #       g5 on 2013-06-08 - 0
 #       etc...
+# /Users/zubaird/ruby-data-structure-practice/curriculum.json
+file = open("curriculum.json")
+json = file.read
+
+cirriculum = JSON.parse(json)
+
+cirriculum["units"].each do |unit|
+  puts unit["name"]
+  unit["lessons"].each do |lesson|
+    lesson["occurrences"].each do |occurence, value|
+      puts "  #{value["cohort"]["name"]} on #{occurence} - #{value["cohort"]["id"]}"
+    end
+  end
+end
