@@ -22,7 +22,9 @@ CURRICULUM[:units].each do |unit|
         @comment_counter << comment_details[:comment]
       end
     end
+
     @total_comments << @comment_counter.size
   end
+
   puts "#{unit[:name]} - #{@total_comments.inject(0, :+)}"
 end
